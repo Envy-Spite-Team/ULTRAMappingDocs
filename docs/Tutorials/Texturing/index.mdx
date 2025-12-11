@@ -11,14 +11,28 @@ ULTRAKILL use a certain UV scale level on its faces. Most of them are 0.2 but th
 Textures are images, while materials is what is applied onto the geometry. Remember to use materials instead of textures.
 :::
 
+# Object Texturing
+
+To apply a material onto an object, simply drag the material from project file explorer onto the object. You can find all the materials in `ULTRAKILL Assets/Materials/`.
+
 # Face Texturing
 
-In ProBuilder, you are able to apply materials on specific faces and manipulate them. For that, select the face, and apply the material on it.
+At first, you will only need to apply a material onto the whole object. However, to give your environment a better look, you might want to add more materials onto the same object. In ProBuilder, you are able to create more faces, apply materials on specific faces and manipulate them. For that, ProBuilder provides tools such as:
+- `Subdivide Faces`: Used for dividing a face to smaller faces;
+- `Connect Edges`: Used for creating a new edge, thus splitting a face in two(available in `Edge Manipulation` mode.);
+- `Subdivide Edges`: Used for dividing an edge into two;
+- `Connect Vertices`: Also used for creating a new edge, but provides a finer control by you being able to move individual vertices in `Vert Manipulation` mode.
 
-[IMAGE PLACEHOLDER]
+:::note
+These functions are usually enough for making high quality texturing, however you can use different functions or opt out into using Blender if you are familiar with it.
+:::
 
 # Face Texture Manipulation
 
-To manipulate the texture, open UV editor in the probuilder window. In there you can change the scale, rotation and face texture location. By pressing the gizmo button in the UV window, you will be able to manipulate the texture in the scene itself.
+After you apply a material, you can immediately see that the texture on the face appear to be too small. This can be fixed by changing the tiling scale in UV Editor.
 
-[IMAGE PLACEHOLDER]
+To do so, open UV editor in the ProBuilder window. In there, set the scale to 0.2 both in X and Y axises. You can also change rotation and location of the texture. By pressing the gizmo button in the UV window, you will be able to manipulate the texture in the scene itself.
+
+<div style={{ textAlign: "center" }}>
+	<img src={require('./assets/uv-editor.png').default} alt="UV editor window"></img>
+</div>

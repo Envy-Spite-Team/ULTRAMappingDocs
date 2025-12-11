@@ -6,11 +6,27 @@ title: Contribution
 
 Envy and Spite is an open-source project, as well as this documentation. This gives you opportunity to create your own document and contribute into this project. In this page, you will see contribution standards.
 
+:::important
 Useful Resources:
 - [Docusaurus Documentation](https://docusaurus.io/docs/)
-  - Because this documentation was made with Docusaurus, you should probably know how to use it.
+  - Because this documentation was made with Docusaurus, you might need to know some details of it.
+- [MDX Documentation](https://mdxjs.com/docs/)
+  - This documentation website uses Docusaurus. Because of that, documents are parsed using MDX and must follow JSX formatting.
+:::
 
-This documentation website uses Docusaurus. Because of that, documents are parsed using MDX and must follow JSX formatting. Here is a example of a .mdx document.
+# Creating a document
+
+First, create a folder with the name of your document. In there create: `index.mdx` and `assets` folder. `index.mdx` is the file of your document, while `assets` folder is for images, files, etc.
+
+At the start of `index.mdx`, make sure to specify the name of the document with a position if needed. This is required for the document to properly show up in the sidebar.
+
+When dividing the document into chapters, please use `# Chapter name`.
+
+You can read the basics of MDX [here](https://mdxjs.com/docs/what-is-mdx/)
+
+# Example
+
+Here is the example of an `index.mdx` file. You can find this file in the root directory of the project.
 
 ```mdx
 ---
@@ -79,8 +95,3 @@ export const Local = properties => <span style={{color: 'red'}} {...properties} 
 An <External>external</External> component and a <Local>local one</Local>.
 ```
 <figcaption>The code is partially taken from https://mdxjs.com/docs/what-is-mdx/.</figcaption>
-
-You can read the mdx documentation (here)[https://mdxjs.com/docs/what-is-mdx/]
-
-## Creating a document
-

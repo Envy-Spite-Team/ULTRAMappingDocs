@@ -64,11 +64,16 @@ To create a light source right click in the scene menu, hit light and choose wha
 
 ## Lighting up the level
 
-As it has been said above, ULTRAKILL uses vertexlit shaders. Thus for a high quality lighing, it is recommended to subdivide walls and floor one time. However, depending on the enviroment and atmosphere that you are 
+As it has been said above, ULTRAKILL uses vertexlit shaders. Thus for a high quality lighing, it is recommended to subdivide walls and floor one time. *However*, depending on the enviroment and atmosphere that you are 
 creating, more or less subdivisions are needed to be made. For example, if there is a single light source in a dark room, you can subdivide the lit floor 2 times, and not subdivide the walls at all.
 
-[IMAGE PLACEHOLDER]
-
+<div style={{ textAlign: 'center'}}>
+<figure>
+<img src={require('./assets/wireframe-on.png').default} 
+alt="wireframe"></img>
+<figcaption>The objects that are lit by the spot light have much more subdivisions, while other objects have less.</figcaption>
+</figure>
+</div>
 :::warning
 Excessive amount of subdivisions will cause poor performance in your level. Even if it runs fine on your PC, it may lag on lower-end computers.
 :::
@@ -77,13 +82,16 @@ Excessive amount of subdivisions will cause poor performance in your level. Even
 
 To add a skybox from the orginal game, go into `ULTRAKILL Assets/Materials/Skyboxes` and simply drag a material into the scene.
 
-[IMAGE PLACEHOLDER]
+<img src={require('./assets/skyboxes.png').default} 
+alt="skyboxes"></img>
 
 In case you want to add a custom skybox, in the project explorer, right lick, click on `Create` and select Material. Set the shader of the material to `Skybox/Panoramic`. Then simply drag the material into the scene.
 
 <div style={{ textAlign: "center" }}>
-	<img src="https://github.com/layzyidiot/e-sw/blob/main/images/skybox.png?raw=true" alt="Shaders for skyboxes" width="30%" height="30%" ></img>
-	<img src="https://github.com/layzyidiot/e-sw/blob/main/images/skybox2.png?raw=true" alt="Shaders for skyboxes" width="32.5%" height="32.5%" ></img>
+	<img src={require('./assets/skybox-1.png').default} 
+alt="skyboxes"></img>
+	<img src={require('./assets/skybox-2.png').default} 
+alt="skyboxes"></img>
 </div>
 
 
