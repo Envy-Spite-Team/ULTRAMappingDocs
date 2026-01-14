@@ -1,0 +1,13 @@
+---
+title: Indoors Sound Muffling
+---
+
+# Tutorial
+
+In order to muffle outside sounds indoors:
+
+1. In the gameobject that contains the sound that you wish to muffle, add `Audio Low Pass Filter`.
+
+2. Create an empty gameobject and give it the `Outdoor Light Master` component.
+
+3. In `Outdoor Light Master`, add the gameobject with `Audio Low Pass Filter` to the `Muffle When Indoors` field.

@@ -65,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/ens-social.png',
       navbar: {
-        title: 'Unofficial ULTRAMapping Docs',
+        title: 'ULTRAMapping Docs',
         logo: {
           alt: 'logo',
           src: 'img/logo.png',
