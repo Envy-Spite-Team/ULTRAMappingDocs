@@ -11,20 +11,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   trailingSlash: false,
-  title: 'Solaris Docs',
-  tagline: 'Level Creation Documentation',
+  title: 'ULTRAMapping Docs',
+  tagline: 'Unofficial Level Creation Documentation',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://envy-spite-team.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/SolarisDocs/',
+  baseUrl: '/ULTRAMappingDocs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Envy-Spite-Team', // Usually your GitHub org/user name.
-  projectName: 'SolarisDocs', // Usually your repo name.
+  projectName: 'ULTRAMappingDocs', // Usually your repo name.
   deploymentBranch: 'pages-deploy',
 
   onBrokenLinks: 'throw',
@@ -49,7 +49,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Envy-Spite-Team/SolarisDocs',
+            'https://github.com/Envy-Spite-Team/ULTRAMappingDocs',
         },
         blog: false,
         theme: {
@@ -65,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/ens-social.png',
       navbar: {
-        title: 'Solaris Docs',
+        title: 'Unofficial ULTRAMapping Docs',
         logo: {
           alt: 'logo',
           src: 'img/logo.png',
@@ -78,7 +78,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/Envy-Spite-Team/SolarisDocs',
+            href: 'https://github.com/Envy-Spite-Team/ULTRAMappingDocs',
             label: 'GitHub',
             position: 'right',
           },
@@ -100,13 +100,9 @@ const config = {
             title: 'Community & Help',
             items: [
               {
-                label: 'Envy & Spite Discord Server',
+                label: 'ULTRAKILL Mapping Discord Server',
                 href: 'https://discord.gg/KqK5yDsRjQ',
               },
-              {
-                label: 'Envy & Spite YouTube Channel (Abandoned)',
-                href: 'https://www.youtube.com/@EnvySpite'
-              }
             ],
           },
           {
@@ -114,12 +110,12 @@ const config = {
             items: [
               {
                 label: 'GitHub Repository',
-                href: 'https://github.com/Envy-Spite-Team/SolarisDocs',
+                href: 'https://github.com/Envy-Spite-Team/ULTRAMappingDocs',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Solaris Docs Team, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ULTRAMapping Docs Team, Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
