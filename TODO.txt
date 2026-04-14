@@ -1,24 +1,9 @@
 Rewrite:
-	Checkpoint Setup
-	Arenas And Enemies
-	Setting up MusicManager
-	Object Activator
-	Compiling
-	Screenshake
-	Symbiote
-	Delayed Level Start
-	Custom Terminal Entry
-Write:
-	Challenges
-	Custom Assets
-	Contribution
-	Skulls and Buttons-Buttons section
-Fix:
-Add:
-	More/Update images
 
-LATER:
+Write:
+	- Challenges;
+	- Custom Assets;
+	- Contribution page;
+	- Skulls and Buttons-Buttons section;
 Fix:
-Update:
-	Organization
-	Divide adv guides and components from tutorial
+    - Checkpoints page suggests using Rooms to Inherit instead of Rooms;
