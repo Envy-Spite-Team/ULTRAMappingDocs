@@ -2,37 +2,47 @@
 title: Level Structure
 sidebar_position: 1
 ---
-# ULTRAKILL Level Structure
+# Level Structure
 
-Levels in ULTRAKILL consist of *rooms*. Rooms contain the geometry of the level and the arena
-logic itself. It is highly recommended to build levels this way for organization and ease of
-making arenas. Here is the example of a such hierarchy:
+A level in ULTRAKILL is made up of a bunch of rooms, and each is typically split by Doors, Checkpoints, and other objects.
 
-<div style={{textAlign: 'right'}}>
-    <img src={require('./assets/LevelStructure.png').default} width='20%'></img>
-</div>
+In a given room, there are 2 main child objects:
+- Non-Stuff (also known as Static)
+- Stuff (also known as Dynamic)
 
-## Naming of the rooms
+---
 
-It is considered a good practice to number your rooms according to their order, from start room
-to final room. For example: `1 - Apartments` and `2 - Streets`. This is not required, but it
-helps with organizing when you are making a big level with multiple level creators involved.
+### Non-Stuff
 
-## Room Hierarchy
+This is your geometry, static assets, and *things that **do not** need to be reset on Checkpoint restart.*
 
-The room has 2 child gameobjects. *Stuff* and *Non-Stuff*. Stuff is for waves and enemies, while
-Non-Stuff is for geometry, lighting, etc. Everything in Non-Stuff is not required to have a
-strict hierarchy, so you can put level geometry in it without a need to organize them:
+### Stuff
 
-<div style={{textAlign: 'right'}}>
-    <img src={require('./assets/NonStuff.png').default} width='20%'></img>
-</div>
+This is your arenas, setpieces, and *things that **do** need to be reset on Checkpoint restart.*
 
-On the other hand, Stuff needs to have a *strict hierarchy* for the arenas to work properly.
-Inside of it, you can create *Wave* gameobjects that will contain the enemies for that wave and
-*Encounters* that can contain waves inside of them. You will learn about them by proceeding
-further into the wiki.
+It is ***absolutely important*** that your Stuff object has the `GoreZone` component added to it. This is required when it comes to using Checkpoints.
 
-<div style={{textAlign: 'right'}}>
-    <img src={require('./assets/Stuff.png').default} width='20%'></img>
-</div>
+---
+
+With this, the typical hierarchy of a room consists of:
+
+- 1 - MyRoom
+  - Non-Stuff
+    - Floors
+    - Walls
+    - Ceiling
+    - SkullAltar
+  - Stuff
+    - ArenaTrigger
+    - Wave1
+    - Wave2
+    - Breakables
+
+
+It is best to organize your hierarchy and level in this manner, as a room-by-room setup is easy to navigate and aids in basic optimization later on with Doors.
+
+It also helps to number your rooms incrementally, as `1 - MyRoom` suggests that it is the first room in the level's layout.
+
+:::note
+If your room does not need a Stuff object (i.e. the room doesn't have any arenas, resettable setpieces, etc.), then you can omit it.
+:::
