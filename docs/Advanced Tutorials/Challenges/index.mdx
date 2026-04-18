@@ -2,3 +2,62 @@
 title: Challenges
 ---
 
+## Setup
+
+Before you add a Challenge to your level, there's some setup:
+
+1. From the Rude Exporter, click "Modify Level" on the level you wish to add a Challenge to.
+2. Enable "Challenge", and type in your Challenge in the text field below it.
+
+---
+
+## Challenge Components
+
+There is a whole load of components used for marking Challenges as both completed and failed under specific conditions.
+
+The Challenge can also be marked as failed permanently, meaning it cannot be completed.
+
+:::warning
+Checkpoints save the state of the Challenge when you grab them, and restore them to that saved state on reset. If the Challenge is failed permanently, it will always reset it to failed.
+:::
+
+### `Challenge Done By Default`
+Marks the Challenge as done on scene load.
+
+### `Challenge Trigger`
+Using a trigger, mark the Challenge to `Type` when the player enters it
+
+`Disable On Exit` reverts the Challenge to opposite of `Type` when the player exits the trigger
+
+:::tip
+If none of these components fit your need, you can use this component without a trigger to mark the Challenge as done & failed at will through enabling & disabling the object. `Disable On Exit` has to be true for the disabling part to work.
+
+Be weary of the warning above when using this method!
+:::
+
+### `Kill Challenge` in `Activate Next Wave`
+Upon completing this wave with `Last Wave` being true, mark the Challenge as done.
+
+### `Kill Amount Challenge`
+When the number of kills equals `Kill`, mark Challenge as done, else mark as failed.
+
+### `Pacifist Challenge`
+Mark Challenge as done by default. If any enemy is *shot*, mark Challenge as failed.
+
+### `Parry Challenge`
+Added to an enemy object.
+
+If the player melee/shotgun parries this enemy, mark Challenge as done
+
+Annoyingly, this seems inconsistent with projectiles the enemy spawns. As parrying a Providence marks it as done, but not a Cerberus apple, for example.
+
+### `Slide Length Challenge`
+If the player slides for longer than `Slide Length` (in seconds), mark Challenge as done.
+
+### `Speed Kill Challenge`
+Added to an enemy object.
+
+When this enemy is activated, count down from `Time Left`. If the enemy is killed in this time frame, mark the Challenge as done.
+
+### `Time Challenge`
+On level start, the Challenge is marked as done until the in-game timer exceeds `Time`, or `Reached Goal` is marked as true via `ReachedGoal()`. This is the only Challenge component that, when failed, marks the Challenge as failed permanently.
