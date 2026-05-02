@@ -1,0 +1,53 @@
+---
+title: Doors
+---
+
+## General Information
+
+- `Activated Rooms` - *Activated* when the door starts to open.
+- `Deactivated Rooms` - *Deactivated* when the door starts to open.
+
+{/* TODO: more stuff */}
+
+---
+
+## Locking
+
+### Manually
+
+As part of a Unity event, you can unlock doors, lock them, or force them to remain open or closed.
+
+![The locking and unlocking methods in an event.](LockingUnlockingMethods.png)
+
+The `DoorUnlocker` component will unlock the `Door` param when it gets enabled.
+
+### Via `DoorLock`s
+
+The `DoorLock` prefab can be found in `ULTRAKILL Assets/Prefabs/Levels/Doors`.
+To use it, place it as a child of the door you wish to be locked. This will then automatically lock the door as long as the `DoorLock` is active and 'closed'.
+To unlock the door, you can either open it, or disable the `DoorLock` game object.
+
+---
+
+## Opening Doors
+### Door Controller
+The `Door Controller` component should be placed on a GameObject with a trigger collider, as a child of the door you wish to open.
+When the player enters the trigger, the door will open.
+When the player exits the trigger, the door will close.
+
+### Door Opener
+The `Door Opener` component can be used to open doors. It has two different behaviors:
+- If attached to a GameObject with a trigger collider, it will open the door when the player enters the trigger.
+- If not, it will open the door immediately when it is enabled.
+
+---
+
+## Big Doors
+Doors with two or more parts.
+
+**WORK IN PROGRESS**
+
+---
+
+## Linked Doors
+**WORK IN PROGRESS**
