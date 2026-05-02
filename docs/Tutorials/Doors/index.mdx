@@ -88,6 +88,8 @@ For a general portal tutorial, see [Portals (Redirect)](../../Advanced%20Tutoria
 
 The only prefab setup to use portals is the `DoorFraud (Portal)` (found in `ULTRAKILL Assets/Prefabs/Levels/Doors`). It does require a couple changes, because Rude doesn't seem to decompile Portals properly.
 - There are three sub objects: `DoorFraud 1`, `DoorFraud 2`, and `NoPassEnabler`.
+  {/* - ![basic-frauddoorportal-tree.png](basic-frauddoorportal-tree.png) */}
+  - ![full-frauddoorportal-tree.png](full-frauddoorportal-tree.png)
   - `NoPassEnabler` - Can be activated to activate the `NoPass` (the red skull and collider) on both doors.
   - `DoorFraud 1` and `DoorFraud 2` - These can be positioned anywhere in the world.
 - On the root object, find the Portal component.
@@ -95,3 +97,7 @@ The only prefab setup to use portals is the `DoorFraud (Portal)` (found in `ULTR
   - Under `Linked Portals`, set `Entry` to `DoorFraud 1/PortalParent/Portal (In)`, and `Exit` to `DoorFraud 2/PortalParent/Portal (In)`
   - Set `Entry Traveller Flags` and `Exit Traveller Flags` as needed, to allow or disallow travelling through the portal.
   - Set `Render Settings` as needed, to set which sides render.
+
+It should look similar to this:
+
+![fraud-door-portal-config.png](fraud-door-portal-config.png)
