@@ -49,7 +49,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Envy-Spite-Team/ULTRAMappingDocs',
+            'https://github.com/Envy-Spite-Team/ULTRAMappingDocs/blob/main',
         },
         blog: false,
         theme: {
